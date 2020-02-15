@@ -21,8 +21,8 @@ function main()
     context = canvas.getContext('2d');
 
     circles = [];
-    for (let index = 0; index < 5000; index++) {
-        let x =  Math.floor((Math.random() * 20000) - 10000);
+    for (let index = 0; index < 1000; index++) {
+        let x =  Math.floor((Math.random() * 4000) - 2000 );
         let y =  Math.floor((Math.random() * 1000) + 1); 
         let radius =  Math.floor((Math.random() * 10) + 1); 
         circles.push(new Circle(x,y,radius));
@@ -38,8 +38,8 @@ function main()
 function drawCircle(circle, context)
 {
     context.beginPath();
-    let x = Math.abs(circle.x - camera.x);
-    let y = Math.abs(circle.y - camera.y);
+    let x = circle.x - camera.x;
+    let y = circle.y - camera.y;
     context.arc(x,y, circle.radius, 0, 2 * Math.PI);
     context.closePath();
     context.stroke();
