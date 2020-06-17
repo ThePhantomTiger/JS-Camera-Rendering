@@ -40,11 +40,11 @@ class Camera {
     actionBuffer = [];
     controlStates = {"Up" : false, "Right" : false, "Down" : false, "Left" : false};
     
-    constructor(x, y){
+    constructor(x, y, xRange, yRange){
         this.x = x;
         this.y = y;
-        this.xRange = 500;
-        this.yRange = window.innerHeight;
+        this.xRange = xRange;
+        this.yRange = yRange;
         this.zoomScale = 1;
         
         this.xMin = this.x - this.xRange;

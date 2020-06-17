@@ -49,7 +49,7 @@ function main()
         circles.push(new Circle(x,y,radius));
         
     }
-    camera = new Camera(0,0);
+    camera = new Camera(0,0, 500, window.innerHeight);
     
     window.addEventListener('keydown', function(e){camera.keyDown(e)});
     window.addEventListener('keyup', function(e){camera.keyUp(e)});
